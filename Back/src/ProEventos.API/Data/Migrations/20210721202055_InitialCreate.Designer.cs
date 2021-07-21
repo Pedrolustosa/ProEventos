@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProEventos.API.Data;
 
-namespace ProEventos.API.Data.Migrations
+namespace ProEventos.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210719231813_initial")]
-    partial class initial
+    [Migration("20210721202055_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
