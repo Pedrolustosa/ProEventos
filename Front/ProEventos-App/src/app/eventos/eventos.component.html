@@ -9,9 +9,9 @@
 </form>
 
 <div class="table-responsive">
-  <table class="table align-middle table-sm table-striped table-bordered">
-    <thead class="thead-dark">
-      <tr>
+  <table class="table align-middle table-sm table-striped table-bordered table-hover">
+    <thead>
+      <tr style="font-size: .8rem;">
         <th>#</th>
         <th>Imagem</th>
         <th>Tema</th>
@@ -22,7 +22,7 @@
         <th>Opções</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngIf="eventos && eventos.length" style="font-size: 1rem;">
       <tr *ngFor="let evento of eventos">
         <td>{{evento.eventoId}}</td>
         <td>{{evento.imageURL}}</td>
@@ -34,5 +34,12 @@
         <td></td>
       </tr>
     </tbody>
+    <tfoot *ngIf="!eventos.length">
+      <tr>
+        <td colspan="8" class="text-center">
+          <h3>Nenhum eventos cadastrado</h3>
+        </td>
+      </tr>
+    </tfoot>
   </table>
 </div>
