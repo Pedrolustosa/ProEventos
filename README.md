@@ -1,27 +1,33 @@
-# ProEventosApp
+## ProEventosApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
+Projeto criado para aprendizado sobre API RESTfull com o Asp.NET Core, pois, esse tipo de projeto é diferente de uma API da Web Normal.
 
-## Development server
+Nesse curso fala sobre os principais tópicos, como interagir corretamente com sua API usando os métodos HTTP corretos e códigos de status e métodos de segurança, validação, recursos comuns como paginação, classificação, filtragem e modelagem de dados e suporte a HATEOAS, versionamento, cache e simultaneidade.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Aprenderá também a trabalhar com multi-camadas utilizando aplicação .net core no vs code, além é claro de aprender a trabalhar com Entity Framework Core nessas 5 camadas.
+Por fim ou entre cada uma das ações criadas pelo lado do servidor, também criaremos do lado do cliente uma aplicação utilizando a framework Angular integrando assim, lado do Cliente e lado do Servidor.
 
-## Code scaffolding
+No final deste curso, você poderá criar uma API com nível 3 de maturidade, que é o nível mais alto possível para APIs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## O que você aprenderá
 
-## Build
+- Introdução ao ASP .NET Core 5
+- Introdução à Angular 11
+- Implementar RESTful API
+- Características e Conceitos Essenciais Asp .net API MVC
+- Mergulho ao Entity Framework Core 5
+- Criar Web API em várias Camadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Tecnologias
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- C#
+- .NET Core 5
+- Entity Framework Core
+- Angular 10 ~ 11
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- SQLite
+- MySQL
+- Docker
