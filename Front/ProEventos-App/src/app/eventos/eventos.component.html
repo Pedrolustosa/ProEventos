@@ -1,55 +1,64 @@
-<h1>Eventos Componentes</h1>
-<hr>
-
-<div class="form-inline">
-  <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filterList">
-    <button class="btn btn-outline-success">Buscar</button>
+<div class="card mt-3 my-5">
+  <div class="card-header">
+    <h1>Eventos Componentes</h1>
   </div>
-</div>
+  <div class="card-body">
 
 
-<div class="table-responsive">
-  <table class="table align-middle table-sm table-striped table-bordered table-hover">
-    <thead>
-      <tr style="font-size: .8rem;">
-        <th>
-          <button class="btn btn-sm btn-outline-dark" (click)="StatusImage()">
-            <i class="far fa-eye">
-              {{!showImage ? 'Exibir' : 'Ocultar'}}
-            </i>
-          </button>
-        </th>
-        <th>#</th>
-        <th>Tema</th>
-        <th>Local</th>
-        <th>Data</th>
-        <th>Qtd Pessoas</th>
-        <th>Lote</th>
-        <th>Opções</th>
-      </tr>
-    </thead>
-    <tbody *ngIf="eventos && eventos.length" style="font-size: 1rem;">
-      <tr *ngFor="let evento of filteredEvents">
-        <td>
-          <img [collapse]="!showImage" [isAnimated]="true" src="/assets/images/{{evento.imageURL}}"
-            [style.width.px]="150" [style.margin.px]="2" alt="Eventos">
-        </td>
-        <td>{{evento.eventoId}}</td>
-        <td>{{evento.tema}}</td>
-        <td>{{evento.local}}</td>
-        <td>{{evento.dataEvento}}</td>
-        <td>{{evento.qtdPessoas}}</td>
-        <td>{{evento.lote}}</td>
-        <td></td>
-      </tr>
-    </tbody>
-    <tfoot *ngIf="!eventos.length">
-      <tr>
-        <td colspan="8" class="text-center">
-          <h3>Nenhum eventos cadastrado</h3>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+    <div class="form-inline">
+      <div class="form-group mb-2">
+        <label class="mr-2">Pesquisar: </label>
+        <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filterList">
+      </div>
+    </div>
+
+
+    <div class="table-responsive-lg d-flex justify-content-center">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr style="font-size: .8rem;">
+            <th>
+              <button class="btn btn-sm btn-outline-dark" (click)="StatusImage()">
+                {{!showImage ? 'Exibir' : 'Ocultar'}}
+              </button>
+            </th>
+            <th>#</th>
+            <th>Tema</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Qtd Pessoas</th>
+            <th>Lote</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="eventos && eventos.length">
+          <tr *ngFor="let evento of filteredEvents">
+            <td>
+              <img [style.width.rem]="widthImage" [style.margin.rem]="marginImage" src="/assets/images/{{evento.imageURL}}"
+                alt="Eventos" [collapse]="!showImage" [isAnimated]="true">
+            </td>
+            <td>{{evento.eventoId}}</td>
+            <td>{{evento.tema}}</td>
+            <td>{{evento.local}}</td>
+            <td>{{evento.dataEvento}}</td>
+            <td>{{evento.qtdPessoas}}</td>
+            <td>{{evento.lote}}</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-warning">Editar</button>
+                <button type="button" class="btn btn-outline-danger">Excluir</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot *ngIf="!eventos.length">
+          <tr>
+            <td colspan="8" class="text-center">
+              <h3>Nenhum eventos cadastrado</h3>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
 </div>

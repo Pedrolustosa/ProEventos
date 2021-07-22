@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventos.component.scss']
 })
 export class EventosComponent implements OnInit {
+  private FilterList = '';
   public eventos: any = [];
   filteredEvents: any = [];
   showImage = true;
-  private _filterList: string = '';
+  widthImage = 12;
+  marginImage = .8;
 
   public get filterList(): string{
-    return this._filterList;
+    return this.FilterList;
   }
 
   public set filterList(value: string){
-    this._filterList = value;
+    this.FilterList = value;
     this.filteredEvents = this.filterList ? this.filterEvents(this.filterList) : this.eventos;
   }
 
@@ -25,7 +27,7 @@ export class EventosComponent implements OnInit {
     filterFor = filterFor.toLocaleLowerCase();
     return this.eventos.filter(
       evento => evento.tema.toLocaleLowerCase().indexOf(filterFor) !== -1
-    )
+    );
   }
 
   constructor(private http: HttpClient) { }
