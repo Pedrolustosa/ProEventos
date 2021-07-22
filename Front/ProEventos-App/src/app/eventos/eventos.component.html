@@ -12,8 +12,14 @@
   <table class="table align-middle table-sm table-striped table-bordered table-hover">
     <thead>
       <tr style="font-size: .8rem;">
+        <th>
+          <button class="btn btn-sm btn-outline-dark" (click)="StatusImage()">
+            <i class="far fa-eye">
+              {{!showImage ? 'Exibir' : 'Ocultar'}}
+            </i>
+          </button>
+        </th>
         <th>#</th>
-        <th>Imagem</th>
         <th>Tema</th>
         <th>Local</th>
         <th>Data</th>
@@ -24,11 +30,11 @@
     </thead>
     <tbody *ngIf="eventos && eventos.length" style="font-size: 1rem;">
       <tr *ngFor="let evento of eventos">
-        <td>{{evento.eventoId}}</td>
         <td>
-          <img src="/assets/images/{{evento.imageURL}}" 
-          [style.width.px]="75" [style.margin.px]="2" alt="Eventos">
+          <img [collapse]="showImage" [isAnimated]="true" src="/assets/images/{{evento.imageURL}}"
+            [style.width.px]="150" [style.margin.px]="2" alt="Eventos">
         </td>
+        <td>{{evento.eventoId}}</td>
         <td>{{evento.tema}}</td>
         <td>{{evento.local}}</td>
         <td>{{evento.dataEvento}}</td>
