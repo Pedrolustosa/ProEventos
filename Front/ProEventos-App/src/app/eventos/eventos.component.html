@@ -8,7 +8,7 @@
     <div class="form-inline">
       <div class="form-group mb-2">
         <label class="mr-2">Pesquisar: </label>
-        <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filterList">
+        <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filtroLista">
       </div>
     </div>
 
@@ -34,8 +34,8 @@
         <tbody *ngIf="eventos && eventos.length">
           <tr *ngFor="let evento of filteredEvents">
             <td>
-              <img [style.width.rem]="widthImage" [style.margin.rem]="marginImage" src="/assets/images/{{evento.imageURL}}"
-                alt="Eventos" [collapse]="!showImage" [isAnimated]="true">
+              <img [style.width.rem]="widthImage" [style.margin.rem]="marginImage"
+                src="/assets/images/{{evento.imageURL}}" alt="Eventos" [collapse]="!showImage" [isAnimated]="true">
             </td>
             <td>{{evento.eventoId}}</td>
             <td>{{evento.tema}}</td>
