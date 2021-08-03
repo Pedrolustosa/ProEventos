@@ -11,9 +11,8 @@ export class EventoService {
 
   constructor(private http: HttpClient) { }
 
-  // tslint:disable-next-line: typedef
-  getEventos() {
-    return this.http.get(this.baseURL);
+  public getEventos(): Observable<Evento[]> {
+    return this.http.get<Evento[]>(this.baseURL);
   }
 
   public getEventosByTema(tema: string): Observable<Evento[]> {
