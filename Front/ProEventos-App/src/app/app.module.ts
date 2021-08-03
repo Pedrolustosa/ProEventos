@@ -61,6 +61,8 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
     EventoService
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class AppModule { }
