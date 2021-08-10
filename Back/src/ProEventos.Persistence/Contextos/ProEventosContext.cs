@@ -5,7 +5,7 @@ namespace ProEventos.Persistence.Contextos
 {
     public class ProEventosContext : DbContext
     {
-        public ProEventosContext(DbContextOptions<ProEventosContext> options)
+        public ProEventosContext(DbContextOptions<ProEventosContext> options) 
             : base(options) { }
         public DbSet<Evento> Eventos { get; set; }
         public DbSet<Lote> Lotes { get; set; }
@@ -16,7 +16,7 @@ namespace ProEventos.Persistence.Contextos
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PalestranteEvento>()
-                .HasKey(PE => new { PE.EventoId, PE.PalestranteId });
+                .HasKey(PE => new {PE.EventoId, PE.PalestranteId});
 
             modelBuilder.Entity<Evento>()
                 .HasMany(e => e.RedesSociais)
