@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using ProEventos.Persistence;
 using ProEventos.Persistence.Contextos;
 
 namespace ProEventos.Persistence.Migrations
@@ -181,13 +182,11 @@ namespace ProEventos.Persistence.Migrations
                 {
                     b.HasOne("ProEventos.Domain.Evento", "Evento")
                         .WithMany("RedesSociais")
-                        .HasForeignKey("EventoId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("EventoId");
 
                     b.HasOne("ProEventos.Domain.Palestrante", "Palestrante")
                         .WithMany("RedesSociais")
-                        .HasForeignKey("PalestranteId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("PalestranteId");
 
                     b.Navigation("Evento");
 
