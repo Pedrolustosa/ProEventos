@@ -31,3 +31,11 @@ No final deste curso, você poderá criar uma API com nível 3 de maturidade, qu
 - SQLite
 - MySQL
 - Docker
+
+```bash
+Create DB
+back/src/ProEventos.Persistence -> dotnet ef --startup-project ../ProEventos.API migrations add initial_V1
+
+Update DB
+back/src/ProEventos.Persistence -> dotnet ef --startup-project ../ProEventos.API database update
+```
